@@ -1,0 +1,9 @@
+<h1>Books</h1>
+
+<%= link_to 'Back', home_path %>
+
+<% @books.each do |book| %>
+  <h2><%= link_to book.title, book_path(book) %></h2>
+  <p>Written By: <%= book.author.name %> | Rating: <%= pluralize(book.rating, 'Star') %> | Summary: <%= book.summary %></p>
+
+<% end %>

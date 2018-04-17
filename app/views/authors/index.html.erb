@@ -1,0 +1,16 @@
+<h1>Authors</h1>
+
+<%= link_to 'Back', home_path %>
+
+<% @authors.each do |author| %>
+  <h2><%= author.name %></h2>
+  <p>Bio: <%= author.bio %></p>
+  <p>List of Books:</p>
+  <ul>
+  <% author.books.each do |book| %>
+    <li><%= link_to book.title, book_path(book) %></li>
+  <% end %>
+  </ul>
+
+
+<% end %>

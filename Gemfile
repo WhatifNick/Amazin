@@ -52,3 +52,11 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Added at 2018-04-17 13:05:32 +1000 by alexspong:
+gem "geocoder", "~> 1.4"
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end

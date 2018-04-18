@@ -1,0 +1,15 @@
+<h1>Stores</h1>
+<p><%= link_to 'Back', home_path %>
+
+<% @stores.each do |store| %>
+
+  <h3><%= link_to store.title, store_path(store) %></h3>
+  <p>Address: <%= store.full_address %></p>
+
+<% end %>
+
+<%= form_tag("/stores/search", method: "post") do %>
+  <%= label_tag(:address, "Enter your address:") %>
+  <%= text_field_tag(:address) %>
+  <%= submit_tag("Search") %>
+<% end %>

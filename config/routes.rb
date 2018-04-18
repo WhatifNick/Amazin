@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
+  get 'customers/form'
+
+  get 'stores/form', as: 'form'
+
+  get 'stores/index', as: 'stores'
+
+  post 'stores/search', to: 'stores#search'
+
+  get 'stores/:store_id', to: 'stores#show', as: 'store'
   get 'pages/home'
   get 'authors/index'
   get 'books/index'
-
+  get 'customers/form', to: 'customers#form', as: 'customer_form'
 
   get '/books/:book_id', to: 'books#show', as: 'book'
 

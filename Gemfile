@@ -60,3 +60,8 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
 end
+
+# Added at 2018-04-18 16:22:50 +1000 by alexspong:
+gem "stripe", "~> 3.13"
+
+gem 'dotenv-rails', groups: [:development, :test]

@@ -8,6 +8,9 @@
 
 <% end %>
 
+<% if  @search %>
+  <p>There was an error entering that address</p>
+<% end %>
 <%= form_tag("/stores/search", method: "post") do %>
   <%= label_tag(:address, "Enter your address:") %>
   <%= text_field_tag(:address) %>

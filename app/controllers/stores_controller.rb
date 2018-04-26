@@ -16,7 +16,7 @@ class StoresController < ApplicationController
   def search
     @search = Store.near(params[:address])[0]
   rescue
-  flash[:notice] = 'Error'
+  flash[:notice] = 'There was an error entering that address'
   redirect_to(:action => 'index')
   end
 end

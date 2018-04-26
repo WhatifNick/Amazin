@@ -1,6 +1,30 @@
 <h1>Books</h1>
+<%= link_to 'Back', home_path, class: "btn btn-info" %>
+<br>
+<br>
 
-<%= link_to 'Back', home_path %>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="book_name">&nbsp;&nbsp;Title:&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" name="book_name"  class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="author_name">&nbsp;&nbsp;Author:&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" name="author_name"  class="form-control">
+      </div>
+
+      &nbsp;&nbsp;
+      <input type="submit" value="Filter" class="btn btn-outline-success">
+      &nbsp;&nbsp;
+      <%= link_to 'Clear Filters', books_path, class: "btn btn-outline-danger" %>
+    </form>
+  </div>
+</div>
+
+<br>
 
 <% @books.each do |book| %>
   <h2><%= link_to book.title, book_path(book) %></h2>

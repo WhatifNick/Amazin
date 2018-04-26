@@ -15,9 +15,7 @@
         <p><%= flash[:error] %></p>
       </div>
     <% end %>
-    <label class="amount">
-      <span>Amount: $5.00</span>
-    </label>
+
   </article>
 
   <%= hidden_field_tag :book_id, @book.id %>
@@ -30,4 +28,4 @@
           data-locale="auto"></script>
 <% end %>
 
-<%= link_to 'Back', books_path %>
+<%= link_to 'Back', books_path, class: "btn btn-info"%>

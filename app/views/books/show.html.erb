@@ -1,4 +1,13 @@
+<style>
+  .showbook {
+    text-align: center;
+  }
+
+</style>
+<div class="showbook">
 <h1><%= @book.title %></h1>
+
+&nbsp;&nbsp;&nbsp;<%= image_tag(@book.img, options={ height: "300px"}) %>
 
 <h3>Written by: <%= @book.author.name %></h3>
 
@@ -28,4 +37,6 @@
           data-locale="auto"></script>
 <% end %>
 
+<br>
 <%= link_to 'Back', books_path, class: "btn btn-info"%>
+</div>
